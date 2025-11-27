@@ -1,6 +1,7 @@
 import data from "../dataMahasiswa.json";
 import { Header } from "./components/header";
 import { Skills } from "./components/Skills";
+import { Experience } from "./components/Experience";
 
 export default function App() {
 return (
@@ -8,6 +9,7 @@ return (
     <div className="w-full max-w-4xl bg-white shadow-xl rounded-2xl p-8">
       <Header profile={data.profile} />
       <Skills skills={data.skills} />
+      <Experience experiences={data.experiences} />
     </div>
   </div>
   );
