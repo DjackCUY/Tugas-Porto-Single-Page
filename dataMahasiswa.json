@@ -35,14 +35,14 @@
     },
     {
       "id": 3,
-      "name": "Tailwind CSS",
+      "name": "C++",
       "category": "technical",
-      "level": "Intermediate",
-      "is_main": false,
-      "years_of_experience": 1,
-      "icon_url": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
+      "level": "Advanced",
+      "is_main": true,
+      "years_of_experience": 2,
+      "icon_url": "https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png"
     },
-        {
+    {
       "id": 4,
       "name": "Python",
       "category": "technical",
@@ -53,12 +53,12 @@
     },
     {
       "id": 5,
-      "name": "C++",
+      "name": "Tailwind CSS",
       "category": "technical",
-      "level": "Advanced",
-      "is_main": true,
-      "years_of_experience": 2,
-      "icon_url": "https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png"
+      "level": "Intermediate",
+      "is_main": false,
+      "years_of_experience": 1,
+      "icon_url": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
     },
     {
       "id": 6,
@@ -93,6 +93,7 @@
       "end_date": "2023-12-31",
       "is_current": false,
       "description": "Mengkoordinasi tim pengembang web untuk kegiatan UKM.",
+      "technologies": ["Notion", "Github"],
       "image_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
