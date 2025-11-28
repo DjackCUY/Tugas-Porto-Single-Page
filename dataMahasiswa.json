@@ -1,17 +1,17 @@
 {
   "id": 12,
-  "slug": "aulia-pratama-2103010023",
+  "slug": "muhammad-mukhorroja-adz-dzaka-L200239194",
 
   "profile": {
-    "full_name": "Aulia Pratama",
-    "nim": "2103010023",
+    "full_name": "Muhammad Mukhorroja Adz Dzaka",
+    "nim": "L200239194",
     "prodi": "Teknik Informatika",
-    "angkatan": "2021",
-    "photo_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "headline": "Fullstack Web Developer | React & Django Enthusiast",
-    "short_bio": "Mahasiswa UMS dengan minat pada pengembangan web fullstack.",
+    "angkatan": "2023",
+    "photo_url": "./profile.jpg",
+    "headline": "IoT Engineer | AI Enthusiast",
+    "short_bio": "Mahasiswa UMS dengan minat pada pengembangan IoT dan Kecerdasan Buatan",
     "location": "Surakarta, Jawa Tengah",
-    "portfolio_url": "https://auliapratama.com"
+    "portfolio_url": "https://www.linkedin.com/in/adzdzaka"
   },
 
   "skills": [
@@ -19,7 +19,7 @@
       "id": 1,
       "name": "ReactJS",
       "category": "technical",
-      "level": "advanced",
+      "level": "Advanced",
       "is_main": true,
       "years_of_experience": 2,
       "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -28,7 +28,7 @@
       "id": 2,
       "name": "Django REST Framework",
       "category": "technical",
-      "level": "intermediate",
+      "level": "Advanced",
       "is_main": true,
       "years_of_experience": 1,
       "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
@@ -37,9 +37,37 @@
       "id": 3,
       "name": "Tailwind CSS",
       "category": "technical",
-      "level": "intermediate",
+      "level": "Intermediate",
       "is_main": false,
-      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      "years_of_experience": 1,
+      "icon_url": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
+    },
+        {
+      "id": 4,
+      "name": "Python",
+      "category": "technical",
+      "level": "Advanced",
+      "is_main": true,
+      "years_of_experience": 2,
+      "icon_url": "https://quantumzeitgeist.com/wp-content/uploads/pythoned.png"
+    },
+    {
+      "id": 5,
+      "name": "C++",
+      "category": "technical",
+      "level": "Advanced",
+      "is_main": true,
+      "years_of_experience": 2,
+      "icon_url": "https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png"
+    },
+    {
+      "id": 6,
+      "name": "PHP",
+      "category": "technical",
+      "level": "Intermediate",
+      "is_main": false,
+      "years_of_experience": 1,
+      "icon_url": "https://www.jagoweb.com/assets/img/general/php.svg"
     }
   ],
 
