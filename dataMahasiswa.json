@@ -7,7 +7,7 @@
     "nim": "2103010023",
     "prodi": "Teknik Informatika",
     "angkatan": "2021",
-    "photo_url": "https://cdn.talenta-ums.ac.id/photos/aulia.jpg",
+    "photo_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "headline": "Fullstack Web Developer | React & Django Enthusiast",
     "short_bio": "Mahasiswa UMS dengan minat pada pengembangan web fullstack.",
     "location": "Surakarta, Jawa Tengah",
@@ -39,7 +39,7 @@
       "category": "technical",
       "level": "intermediate",
       "is_main": false,
-      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     }
   ],
 
@@ -54,7 +54,7 @@
       "is_current": false,
       "description": "Mengembangkan antarmuka dashboard internal menggunakan React.",
       "technologies": ["ReactJS", "Tailwind CSS"],
-      "image_url": "https://cdn.example.com/company/digitalsolusi.png"
+      "image_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
       "id": 102,
@@ -65,7 +65,7 @@
       "end_date": "2023-12-31",
       "is_current": false,
       "description": "Mengkoordinasi tim pengembang web untuk kegiatan UKM.",
-      "image_url": "https://cdn.example.com/logo/ukm-informatika.png"
+      "image_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
       "id": 103,
@@ -77,7 +77,7 @@
       "is_current": true,
       "description": "Membangun API backend UMKM menggunakan DRF dan PostgreSQL.",
       "technologies": ["Django", "DRF", "PostgreSQL"],
-      "image_url": "https://cdn.example.com/projects/umkm-inventory.png"
+      "image_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     }
   ],
 
