@@ -1,22 +1,37 @@
-import { Calendar } from 'lucide-react';
+import { Calendar, Briefcase } from 'lucide-react';
 
 export function Experience({ experiences }) {
-    const getTypeColor = (type) => {
-        if (type === 'project') return 'bg-emerald-100 text-emerald-700 border-emerald-200';
-        if (type === 'internship') return 'bg-blue-100 text-blue-700 border-blue-200';
-        return 'bg-amber-100 text-amber-700 border-amber-200';
+    const getTypeConfig = (type) => {
+        if (type === 'project') return {
+            color: 'from-emerald-500 to-green-500',
+            bgColor: 'bg-emerald-50',
+            borderColor: 'border-emerald-200',
+            textColor: 'text-emerald-700',
+            badgeBg: 'bg-emerald-100',
+            icon: '💼'
+        };
+        if (type === 'internship') return {
+            color: 'from-blue-500 to-cyan-500',
+            bgColor: 'bg-blue-50',
+            borderColor: 'border-blue-200',
+            textColor: 'text-blue-700',
+            badgeBg: 'bg-blue-100',
+            icon: '🏢'
+        };
+        return {
+            color: 'from-amber-500 to-orange-500',
+            bgColor: 'bg-amber-50',
+            borderColor: 'border-amber-200',
+            textColor: 'text-amber-700',
+            badgeBg: 'bg-amber-100',
+            icon: '🎓'
+        };
     };
 
     const getTypeLabel = (type) => {
-        if (type === 'project') return 'project';
-        if (type === 'internship') return 'internship';
-        return 'organization';
-    };
-
-    const getIconBg = (type) => {
-        if (type === 'project') return 'bg-emerald-600';
-        if (type === 'internship') return 'bg-blue-600';
-        return 'bg-amber-600';
+        if (type === 'project') return 'Project';
+        if (type === 'internship') return 'Internship';
+        return 'Organization';
     };
 
     const formatDate = (dateString) => {
@@ -28,55 +43,78 @@ export function Experience({ experiences }) {
 
 return (
     <section>
-        <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
-            <h2 className="text-3xl font-bold mb-8 text-gray-800">Experience</h2>
-            <div className="relative">
-                {/* Vertical Timeline Line */}
-                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200 via-slate-200 to-transparent" />
-                    <div className="space-y-8">
-                    {experiences.map((exp) => (
-                        <div key={exp.id} className="relative pl-16">
-                            {/* Timeline Node */}
-                            <div className={`absolute left-0 top-2 w-12 h-12 ${getIconBg(exp.experience_type)} rounded-full flex items-center justify-center text-white shadow-lg z-10 font-bold text-xl`}>
-                            {exp.experience_type === 'internship' ? '🏢' : exp.experience_type === 'project' ? '💼' : '🎓'}
+        <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8">
+            <div className="flex items-center gap-3 mb-8">
+                <div className="p-2 bg-gradient-to-br from-teal-500 to-green-500 rounded-xl shadow-lg">
+                    <Briefcase size={24} className="text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-800">Experience Journey</h2>
+            </div>
+        
+            <div   div className="relative">
+                {/* Animated gradient line */}
+                <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-cyan-400 to-teal-400 rounded-full shadow-lg"></div>
+
+                <div className="space-y-8">
+                    {experiences.map((exp) => {
+                    const config = getTypeConfig(exp.experience_type);
+                    return (
+                    <div key={exp.id} className="relative pl-20">
+                        {/* Timeline node with glow */}
+                        <div className="absolute left-0 top-0">
+                            <div className={`absolute inset-0 bg-gradient-to-r ${config.color} rounded-full blur-md opacity-50 animate-pulse`}></div>
+                            <div className={`relative w-16 h-16 bg-gradient-to-br ${config.color} rounded-full flex items-center justify-center text-3xl shadow-xl border-4 border-white z-10 transform hover:scale-110 transition-transform`}>
+                                {config.icon}
                             </div>
-                            {/* Content Card */}
-                            <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all hover:border-blue-300">
-                                <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                        </div>
+
+                        {/* Content Card */}
+                        <div className="group relative">
+                            <div className={`absolute -inset-0.5 bg-gradient-to-r ${config.color} rounded-2xl opacity-0 group-hover:opacity-30 blur transition duration-300`}></div>
+                            <div className={`relative bg-gradient-to-br from-gray-50 to-white border-2 ${config.borderColor} rounded-2xl p-6 hover:shadow-lg transition-all shadow-md`}>
+                                <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                                     <div className="flex-1">
-                                        <h3 className="font-bold text-xl text-gray-800 mb-1">{exp.title}</h3>
-                                        <p className="text-gray-600 font-medium">{exp.organization}</p>
+                                        <h3 className="font-bold text-2xl text-gray-800 mb-2">{exp.title}</h3>
+                                        <p className="text-gray-600 font-semibold text-lg">{exp.organization}</p>
                                     </div>
-                                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${getTypeColor(exp.experience_type)}`}>
+                                    <span className={`${config.badgeBg} ${config.textColor} px-4 py-2 rounded-full text-sm font-bold border ${config.borderColor} shadow-md`}>
                                     {getTypeLabel(exp.experience_type)}
                                     </span>
                                 </div>
-                                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3">
-                                    <div className="flex items-center gap-1.5">
-                                        <Calendar size={16} />
-                                        <span className="font-medium">
-                                        {formatDate(exp.start_date)} - {exp.is_current ? "Present" : formatDate(exp.end_date)}
+
+                                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-4">
+                                    <div className={`flex items-center gap-2 ${config.bgColor} px-3 py-1.5 rounded-lg ${config.borderColor} border`}>
+                                        <Calendar size={16} className={config.textColor} />
+                                            <span className="font-semibold">
+                                            {formatDate(exp.start_date)} - {exp.is_current ? "Present" : formatDate(exp.end_date)}
+                                            </span>
+                                        </div>
+                                        {exp.is_current && (
+                                        <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-md animate-pulse">
+                                        ● Current
                                         </span>
-                                    </div>
-                                    {exp.is_current && (
-                                    <span className="bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full text-xs font-semibold border border-blue-200">
-                                    Current
-                                    </span>
-                                    )}
+                                        )}
                                 </div>
-                                <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
+
+                                <p className="text-gray-700 mb-4 leading-relaxed text-base">{exp.description}</p>
+
                                 {exp.technologies && exp.technologies.length > 0 && (
                                 <div className="flex flex-wrap gap-2">
                                     {exp.technologies.map((tech) => (
-                                    <span key={tech} className="px-3 py-1.5 text-xs font-medium bg-white text-gray-700 rounded-lg border border-gray-300 shadow-sm">
-                                    {tech}
+                                    <span
+                                    key={tech}
+                                    className="px-3 py-2 text-sm font-semibold bg-white text-gray-700 rounded-lg border-2 border-gray-200 shadow-sm hover:shadow-md hover:scale-105 transition-all"
+                                    >
+                                        {tech}
                                     </span>
                                     ))}
                                 </div>
                                 )}
                             </div>
                         </div>
-                    ))}
+                    </div>
+                    );
+                    })}
                 </div>
             </div>
         </div>
