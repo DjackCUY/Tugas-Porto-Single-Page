@@ -6,8 +6,9 @@ Aplikasi juga menggunakan Tailwind CSS untuk styling yang responsif dan clean, s
 
 # Cara Menjalankan Aplikasi
 1️⃣ Clone Repository
-git clone [<url-repo>](https://github.com/DjackCUY/Tugas-Porto-Single-Page)
-cd [<nama-folder>](Tugas-Porto-Single-Page)
+
+git clone https://github.com/DjackCUY/Tugas-Porto-Single-Page
+cd Tugas-Porto-Single-Page
 
 2️⃣ Install Dependency
 npm install
