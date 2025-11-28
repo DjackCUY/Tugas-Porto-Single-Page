@@ -1,5 +1,5 @@
 import data from "../dataMahasiswa.json";
-import { Header } from "./components/header";
+import { Header } from "./components/Header";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 
