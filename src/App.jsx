@@ -2,7 +2,6 @@ import data from "../dataMahasiswa.json";
 import { Header } from "./components/header";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
-// import { Statistics } from "./components/Statistics";
 
 export default function App() {
 return (
@@ -20,3 +19,4 @@ return (
     </div>
   );
 }
+
